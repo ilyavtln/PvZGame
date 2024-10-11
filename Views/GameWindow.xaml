@@ -1,0 +1,65 @@
+﻿<Window x:Class="PvZGame.Views.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:PvZGame.Views"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        ResizeMode="NoResize">
+    <Grid>
+        <!-- Текстовое поле для уровня -->
+        <TextBlock x:Name="LevelTextBlock"
+                   FontSize="24" 
+                   FontWeight="Bold" 
+                   Foreground="Black" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10"/>
+
+        <!-- Поле для игры с сеткой -->
+        <Grid x:Name="GameGrid"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Background="LightGreen"
+              Margin="10,50,10,50"
+              MouseDown="GameGrid_MouseDown">
+            <!-- Определяем 5 рядов и 9 колонок -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <!-- Кнопки для действий -->
+        <Button Content="Выбор уровней" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Bottom" 
+                Margin="10" 
+                Click="LevelSelectionButton_Click"/>
+        <Button Content="Уровень завершен" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Bottom" 
+                Margin="10" 
+                Click="LevelSelectionButtonComplete_Click"/>
+        <Button Content="Дальше" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Top" 
+                Margin="10" 
+                Click="LevelSelectionButtonContinue_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="PvZGame.Views.GameLoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:PvZGame.Views"
+        mc:Ignorable="d"
+        Title="GameLoadingWindow" 
+        WindowState="Maximized"
+        Height="450" Width="800">
+    <Grid Background="Pink">
+        <TextBlock Text="Loading Game..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="Black"/>
+        <ProgressBar Name="ProgressBar" IsIndeterminate="True" Height="20" Width="300" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+    </Grid>
+</Window>

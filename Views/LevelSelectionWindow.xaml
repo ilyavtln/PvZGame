@@ -1,0 +1,14 @@
+﻿<Window x:Class="PvZGame.Views.LevelSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:PvZGame.Views"
+        mc:Ignorable="d"
+        Title="LevelSelectionWindow" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid>
+        <ListBox x:Name="LevelListBox" SelectionChanged="LevelListBox_SelectionChanged" />
+        <Button Content="Назад" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
+    </Grid>
+</Window>
